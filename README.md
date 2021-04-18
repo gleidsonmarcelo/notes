@@ -1,6 +1,6 @@
 # Notes
 
-## Gerar de scripts para chamados - PWA Flask + Docker
+## Gerar de Scripts para Chamados - Flask + Docker
 
 ![Badge](https://img.shields.io/static/v1?label=Notes&message=0.1&color=blue)
 ![Badge](https://img.shields.io/static/v1?label=Python&message=3.9.4&color=blue)
@@ -11,7 +11,7 @@
 
 Porjeto desenvolvido para facilitar a utilização dos scripts de atendimento do Help Desk do cliente Globo.
 
-### Notes - Projeto em Conttrução
+### Notes - Projeto em Construção
 
 ### Funcionalidades
 
