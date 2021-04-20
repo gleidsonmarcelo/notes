@@ -14,8 +14,8 @@
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">Notas Padronizadas</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal1">Atendimento de
-                    Chamado</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal1">Atendimento de Chamado</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal2">Contato Improdutivo</a>
             </div>
         </li>
     </ul>
@@ -74,4 +74,67 @@
     </div>
 </div>
 <!-- Modal Atendimento de chamnado -->
+<!-- Modal Contato Improdutivo -->
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Contato Improdutivo</h5>
+            </div>
+            <div class="modal-body">
+                <div class="card px-3 py-3">
+                    <form class="form-row">
+                        <div class="col-md-3 mb-3 text-left">
+                            <label>Data</label>
+                            <div class="input-append date" id="DT1">
+                                <input type="text" id="D1" size="10" class="form-control span2" autocomplete="off">
+                                <span class="add-on">
+                                    <i class="icon-th"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3 text-left">
+                            <label>Hora</label>
+                            <input type="time" id="H1" class="form-control">
+                        </div>
+                        <div class="col-md-6 mb-3 text-left">
+                            <label>Detalhes do Local do Atendimento</label>
+                            <div class="input-group">
+                                <input type="text" id="L1" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3 text-left">
+                            <label>Telefone</label>
+                            <div class="input-group">
+                                <input type="text" id="T1" class="form-control" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3 text-left">
+                            <label>Ramal</label>
+                            <div class="input-group">
+                                <input type="text" id="R1" class="form-control" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3 text-left">
+                            <label>Nota de Pendência</label>
+                            <div class="input-group">
+                                <textarea id="NPCI" rows="5" class="form-control" readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-block" onclick="GenerateNPCI();">Gerar
+                                Nota de Pendência</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="CopyNPCI();">Copiar
+                                Nota de Pendência</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Sair</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Contato Improdutivo -->
 {% endblock %}
