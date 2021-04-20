@@ -16,6 +16,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdownId">
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal1">Atendimento de Chamado</a>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal2">Contato Improdutivo</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal3">Aguardando Data Agendada</a>
             </div>
         </li>
     </ul>
@@ -125,6 +126,57 @@
                             <button type="button" class="btn btn-primary btn-block" onclick="GenerateNPCI();">Gerar
                                 Nota de Pendência</button>
                             <button type="button" class="btn btn-primary btn-block" onclick="CopyNPCI();">Copiar
+                                Nota de Pendência</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Sair</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Contato Improdutivo -->
+<!-- Modal Aguardando Data Agendada -->
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Aguardando Data Agendada</h5>
+            </div>
+            <div class="modal-body">
+                <div class="card px-3 py-3">
+                    <form class="form-row">
+                        <div class="col-md-3 mb-3 text-left">
+                            <label>Data</label>
+                            <div class="input-append date" id="DT2">
+                                <input type="text" id="D2" size="10" class="form-control span2" autocomplete="off">
+                                <span class="add-on">
+                                    <i class="icon-th"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3 text-left">
+                            <label>Hora</label>
+                            <input type="time" id="H2" class="form-control">
+                        </div>
+                        <div class="col-md-6 mb-3 text-left">
+                            <label>Detalhes do Local do Atendimento</label>
+                            <div class="input-group">
+                                <input type="text" id="L2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3 text-left">
+                            <label>Nota de Pendência</label>
+                            <div class="input-group">
+                                <textarea id="NADA" rows="5" class="form-control" readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-block" onclick="GenerateNADA();">Gerar
+                                Nota de Pendência</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="CopyNADA();">Copiar
                                 Nota de Pendência</button>
                         </div>
                     </form>

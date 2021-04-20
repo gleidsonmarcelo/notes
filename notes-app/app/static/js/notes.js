@@ -40,3 +40,29 @@ function CopyNPCI() {
     $("#NPCI").select();
     document.execCommand("copy");
 }
+//Configuração Datetimepicker Aguardando Data Agendada
+$("#DT2").datetimepicker({
+    format: "dd/mm/yyyy",
+    language: "pt-BR",
+    todayHighlight: true,
+    minView: 2,
+    maxView: 3,
+    forceParse: true,
+    todayBtn: true,
+    keyboardNavigation: true,
+    autoclose: true
+});
+//Gerar Nota de Pendência Aguardando Data Agendada
+function GenerateNADA() {
+    var data = document.getElementById("D2").value;
+    var hora = document.getElementById("H2").value;
+    var local = document.getElementById("L2").value;
+    var msg = "Realizado agendamento de atendimento com o/a colaborador(a) no dia "+data+" às "+hora+" no local "+local+"."
+    var script = msg;
+    document.getElementById("NADA").value = script;
+}
+//Copiar Nota de Pendência Contato Improdutivo
+function CopyNADA() {
+    $("#NADA").select();
+    document.execCommand("copy");
+}
