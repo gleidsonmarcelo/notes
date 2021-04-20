@@ -1,9 +1,78 @@
 {% extends "base.html" %}
 {% block index %}
+<!-- Navbar -->
 <nav class="navbar navbar-expand navbar-light bg-light">
-    <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Home</a>
-    </div>
+    <a class="navbar-brand" href="/">
+        <img src="/static/img/logo.svg" width="30" height="30" class="d-inline-block align-top"
+            alt="Logo Notes">
+        Notes
+    </a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Notas Padronizadas</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal1">Atendimento de
+                    Chamado</a>
+            </div>
+        </li>
+    </ul>
 </nav>
+<!-- Navbar -->
+<!-- Modal Atendimento de chamnado -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atendimento de Chamado</h5>
+            </div>
+            <div class="modal-body">
+                <div class="card px-3 py-3">
+                    <form class="form-row">
+                        <div id="" class="col-md-12 mb-3 text-left">
+                            <label>Causa</label>
+                            <div class="input-group">
+                                <input type="text" id="" class="form-control" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3 text-left">
+                            <label>Canal de Atendimento</label>
+                            <select id="" class="form-control">
+                                <option value="Presencial">Presencial</option>
+                                <option value="Telefone">Telefone</option>
+                                <option value="Teams">Teams</option>
+                                <option value="Remoto">Remoto</option>
+                            </select>
+                        </div>
+                        <div id="" class="col-md-12 mb-3 text-left">
+                            <label>Solução</label>
+                            <div class="input-group">
+                                <textarea id="" rows="3" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3 text-left" id="">
+                            <label>Nota de Fechamento</label>
+                            <div class="input-group">
+                                <textarea id="" rows="5" class="form-control" readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-block" onclick="">Gerar
+                                Nota de Fechamento</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="">Copiar
+                                Nota de Fechamento</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Sair</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Atendimento de chamnado -->
 {% endblock %}
