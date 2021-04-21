@@ -66,3 +66,32 @@ function CopyNADA() {
     $("#NADA").select();
     document.execCommand("copy");
 }
+//Configuração Datetimepicker Pendente Solicitante
+$("#DT3").datetimepicker({
+    format: "dd/mm/yyyy",
+    language: "pt-BR",
+    todayHighlight: true,
+    minView: 2,
+    maxView: 3,
+    forceParse: true,
+    todayBtn: true,
+    keyboardNavigation: true,
+    autoclose: true
+});
+//Gerar Nota de Pendência Pendente Solicitante
+function GenerateNPPS() {
+    var data = document.getElementById("D3").value;
+    var hora = document.getElementById("H3").value;
+    var local = document.getElementById("L3").value;
+    var telefone = document.getElementById("T3").value;
+    var ramal = document.getElementById("R3").value;
+    var pendencias = document.getElementById("P3").value;
+    var msg = "Prezado(a) coladorador(a),\n\nRealizada tentativa de contato no local "+local+" e via telefone "+telefone+", Ramal "+ramal+", Teams e E-mail no dia "+data+" às "+hora+", porém sem sucesso.\nSeu chamado está com a(s) seguinte(s) pendência(s):\n\n"+pendencias+"\n\nFavor nos responder este e-mail com as informações ou entrar em contato com Service Desk no ramal 3911 ou no 08007284855."
+    var script = msg;
+    document.getElementById("NPPS").value = script;
+}
+//Copiar Nota de Pendência Pendente Solicitante
+function CopyNPPS() {
+    $("#NPPS").select();
+    document.execCommand("copy");
+}
